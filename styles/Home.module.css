@@ -1,7 +1,11 @@
 .header {
   text-align: center;
-  padding: 4rem 0 6rem;
+  padding: 0;
   position: relative;
+}
+
+.headerContent {
+  padding: 4rem 2rem 6rem;
 }
 
 .logoWrapper {
@@ -16,7 +20,7 @@
   width: 120px;
   height: 120px;
   object-fit: contain;
-  filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.5));
+  filter: drop-shadow(0 0 20px rgba(126, 217, 87, 0.3));
   animation: floatLogo 4s ease-in-out infinite;
 }
 
@@ -39,13 +43,12 @@
 .studioName {
   font-family: 'Bungee', cursive;
   font-size: clamp(2rem, 8vw, 4.5rem);
-  background: linear-gradient(45deg, #FFD700, #7CFC00, #FF69B4, #FFD700);
+  background: linear-gradient(45deg, #ffce00, #7ed957, #ff66c4, #ffce00);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradient-shift 4s ease infinite;
-  text-shadow: 0 0 40px rgba(255, 215, 0, 0.5);
   letter-spacing: -0.02em;
   line-height: 0.9;
 }
@@ -53,11 +56,12 @@
 .tagline {
   margin-top: 2rem;
   font-size: 1.25rem;
-  color: #FFD700;
-  opacity: 0.9;
+  color: #1a1a1a;
+  opacity: 0.8;
   letter-spacing: 0.1em;
   position: relative;
   display: inline-block;
+  font-weight: 500;
 }
 
 .tagline::before,
@@ -80,41 +84,45 @@
 
 .philosophy {
   text-align: center;
-  margin: 4rem 0 6rem;
-  padding: 3rem;
-  background: rgba(124, 252, 0, 0.05);
-  border: 2px solid rgba(124, 252, 0, 0.3);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background: #ffffff;
+  border: 3px solid #7ed957;
   border-radius: 30px;
   position: relative;
   animation: floatSection 8s ease-in-out infinite;
+  box-shadow: 0 10px 30px rgba(126, 217, 87, 0.1);
 }
 
 @keyframes floatSection {
-  0%, 100% { transform: translateY(0) rotate(-1deg); }
-  25% { transform: translateY(-8px) rotate(-0.5deg); }
-  50% { transform: translateY(5px) rotate(-1.5deg); }
-  75% { transform: translateY(-5px) rotate(-0.8deg); }
+  0%, 100% { transform: translateY(0) rotate(-0.5deg); }
+  25% { transform: translateY(-8px) rotate(0deg); }
+  50% { transform: translateY(5px) rotate(-1deg); }
+  75% { transform: translateY(-5px) rotate(-0.3deg); }
 }
-
 
 .philosophy p {
   font-size: 1.3rem;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.9);
+  color: #1a1a1a;
   max-width: 800px;
   margin: 0 auto;
 }
 
 .highlight {
-  color: #7CFC00;
+  color: #7ed957;
   font-weight: 700;
   position: relative;
   display: inline-block;
-  text-shadow: 0 0 20px rgba(124, 252, 0, 0.5);
 }
 
 .gamesSection {
-  margin: 6rem 0;
+  padding: 0;
+}
+
+.gamesSectionInner {
+  padding: 6rem 2rem;
 }
 
 .sectionTitle {
@@ -125,6 +133,7 @@
   position: relative;
   display: inline-block;
   width: 100%;
+  color: #1a1a1a;
 }
 
 .sectionTitle::after {
@@ -135,7 +144,7 @@
   transform: translateX(-50%);
   width: 100px;
   height: 4px;
-  background: linear-gradient(90deg, transparent, #FF69B4, transparent);
+  background: linear-gradient(90deg, transparent, #ff66c4, transparent);
   border-radius: 2px;
 }
 
@@ -144,48 +153,50 @@
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 5rem;
   margin-top: 4rem;
+  padding: 0 2rem;
 }
 
 .gameCard {
-  background: rgba(255, 255, 255, 0.02);
-  border: 2px solid rgba(255, 105, 180, 0.2);
+  background: #ffffff;
+  border: 3px solid #ffce00;
   border-radius: 20px;
   padding: 2.5rem;
   position: relative;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .gameCard:nth-child(1) {
-  border-color: rgba(124, 252, 0, 0.2);
+  border-color: #7ed957;
   animation: floatCard1 10s ease-in-out infinite;
 }
 
 @keyframes floatCard1 {
-  0%, 100% { transform: translateY(0) rotate(-1deg); }
-  25% { transform: translateY(-10px) rotate(-0.5deg); }
-  50% { transform: translateY(8px) rotate(-1.5deg); }
-  75% { transform: translateY(-6px) rotate(-0.8deg); }
+  0%, 100% { transform: translateY(0) rotate(-0.5deg); }
+  25% { transform: translateY(-10px) rotate(0deg); }
+  50% { transform: translateY(8px) rotate(-1deg); }
+  75% { transform: translateY(-6px) rotate(-0.3deg); }
 }
 
 .gameCard:nth-child(2) {
-  border-color: rgba(255, 105, 180, 0.2);
+  border-color: #ff66c4;
   animation: floatCard2 12s ease-in-out infinite;
   animation-delay: -2s;
 }
 
 @keyframes floatCard2 {
-  0%, 100% { transform: translateY(0) rotate(1deg); }
-  25% { transform: translateY(-12px) rotate(0.5deg); }
-  50% { transform: translateY(10px) rotate(1.5deg); }
-  75% { transform: translateY(-8px) rotate(0.8deg); }
+  0%, 100% { transform: translateY(0) rotate(0.5deg); }
+  25% { transform: translateY(-12px) rotate(0deg); }
+  50% { transform: translateY(10px) rotate(1deg); }
+  75% { transform: translateY(-8px) rotate(0.3deg); }
 }
 
 .gameCard:hover {
   animation-play-state: paused;
   transform: rotate(0deg) translateY(-10px) !important;
-  border-color: rgba(255, 215, 0, 0.4);
-  box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+  border-color: #ffce00;
+  box-shadow: 0 20px 40px rgba(255, 206, 0, 0.2);
 }
 
 .gameCard::before {
@@ -195,7 +206,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 206, 0, 0.1), transparent);
   transition: left 0.6s;
 }
 
@@ -214,14 +225,14 @@
   font-family: 'Bungee', cursive;
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  background: linear-gradient(45deg, #7CFC00, #FFD700);
+  background: linear-gradient(45deg, #7ed957, #ffce00);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gameCard:nth-child(2) .gameTitle {
-  background: linear-gradient(45deg, #FF69B4, #FFD700);
+  background: linear-gradient(45deg, #ff66c4, #ffce00);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -229,7 +240,7 @@
 
 .gameDescription {
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.8);
+  color: #4a4a4a;
   margin-bottom: 1.5rem;
 }
 
@@ -242,14 +253,14 @@
   position: relative;
   padding-left: 25px;
   margin-bottom: 0.8rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #6a6a6a;
 }
 
 .gameFeatures li::before {
   content: "→";
   position: absolute;
   left: 0;
-  color: #FFD700;
+  color: #7ed957;
   font-weight: bold;
 }
 
@@ -257,8 +268,8 @@
   display: inline-block;
   margin-top: 1.5rem;
   padding: 0.8rem 2rem;
-  background: linear-gradient(45deg, #7CFC00, #FFD700);
-  color: #1a0033;
+  background: linear-gradient(45deg, #7ed957, #ffce00);
+  color: #1a1a1a;
   text-decoration: none;
   font-weight: 700;
   border-radius: 50px;
@@ -268,27 +279,30 @@
 }
 
 .gameCard:nth-child(2) .gameLink {
-  background: linear-gradient(45deg, #FF69B4, #FFD700);
+  background: linear-gradient(45deg, #ff66c4, #ffce00);
 }
 
 .gameLink:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(126, 217, 87, 0.3);
 }
 
 .footer {
   text-align: center;
-  padding: 4rem 0 2rem;
-  margin-top: 8rem;
-  border-top: 1px solid rgba(255, 105, 180, 0.2);
+  padding: 4rem 2rem 2rem;
+  margin-top: 0;
+  background: #f8f8f8;
+  border-top: 3px solid #ffce00;
 }
 
 .vibeMeter {
   display: inline-block;
   padding: 1rem 2rem;
-  background: rgba(255, 105, 180, 0.1);
+  background: linear-gradient(135deg, #ff66c4 0%, #ffb3e0 100%);
   border-radius: 50px;
   margin-top: 1rem;
+  color: white;
+  font-weight: 500;
 }
 
 .vibeMeter span {
@@ -301,7 +315,7 @@
 }
 
 .footerLinks a {
-  color: #FFD700;
+  color: #7ed957;
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: all 0.3s;
@@ -309,12 +323,11 @@
 }
 
 .footerLinks a:hover {
-  color: #7CFC00;
-  text-shadow: 0 0 10px rgba(124, 252, 0, 0.5);
+  color: #ff66c4;
 }
 
 .separator {
-  color: rgba(255, 255, 255, 0.3);
+  color: #cccccc;
   margin: 0 0.5rem;
 }
 
@@ -324,8 +337,8 @@
   margin: 2rem auto 1rem;
   display: block;
   object-fit: contain;
-  filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3));
-  opacity: 0.8;
+  filter: drop-shadow(0 0 15px rgba(126, 217, 87, 0.2));
+  opacity: 0.9;
   transition: opacity 0.3s, transform 0.3s;
 }
 
@@ -336,7 +349,7 @@
 
 .copyright {
   margin-top: 1rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: #888888;
   font-size: 0.9rem;
 }
 

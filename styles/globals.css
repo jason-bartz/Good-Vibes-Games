@@ -6,101 +6,74 @@
 
 body {
   font-family: 'Space Grotesk', sans-serif;
-  background: #1a0033;
-  color: #fff;
+  background: #ffffff;
+  color: #1a1a1a;
   overflow-x: hidden;
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="10" fill="%23FFD700" opacity="0.8"/></svg>') 16 16, auto;
-}
-
-.vibes-bg {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: 
-    radial-gradient(ellipse at top left, rgba(255, 215, 0, 0.2) 0%, transparent 40%),
-    radial-gradient(ellipse at top right, rgba(255, 105, 180, 0.25) 0%, transparent 40%),
-    radial-gradient(ellipse at bottom left, rgba(124, 252, 0, 0.2) 0%, transparent 40%),
-    radial-gradient(ellipse at bottom right, rgba(255, 215, 0, 0.2) 0%, transparent 40%),
-    radial-gradient(ellipse at center, rgba(255, 105, 180, 0.15) 0%, transparent 60%),
-    linear-gradient(125deg, #1a0033 0%, #2a0845 25%, #1a0033 50%, #2a0845 75%, #1a0033 100%);
-}
-
-@keyframes bgShift {
-  0%, 100% { filter: hue-rotate(0deg); }
-  50% { filter: hue-rotate(15deg); }
-}
-
-.vibe-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  animation: float 20s infinite ease-in-out;
-  pointer-events: none;
-  mix-blend-mode: screen;
-}
-
-.vibe-orb:nth-child(1) {
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(255, 215, 0, 0.6) 0%, rgba(255, 215, 0, 0.2) 50%, transparent 70%);
-  top: -150px;
-  left: -150px;
-  animation-duration: 25s;
-}
-
-.vibe-orb:nth-child(2) {
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(255, 105, 180, 0.5) 0%, rgba(255, 105, 180, 0.2) 50%, transparent 70%);
-  bottom: -200px;
-  right: -200px;
-  animation-duration: 30s;
-  animation-delay: -5s;
-}
-
-.vibe-orb:nth-child(3) {
-  width: 350px;
-  height: 350px;
-  background: radial-gradient(circle, rgba(124, 252, 0, 0.6) 0%, rgba(124, 252, 0, 0.2) 50%, transparent 70%);
-  top: 50%;
-  left: 50%;
-  animation-duration: 35s;
-  animation-delay: -10s;
-}
-
-.vibe-orb:nth-child(4) {
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255, 215, 0, 0.5) 0%, rgba(255, 215, 0, 0.2) 50%, transparent 70%);
-  top: 20%;
-  right: 30%;
-  animation-duration: 28s;
-  animation-delay: -15s;
-}
-
-.vibe-orb:nth-child(5) {
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(circle, rgba(255, 105, 180, 0.4) 0%, rgba(124, 252, 0, 0.3) 50%, transparent 70%);
-  bottom: 30%;
-  left: 20%;
-  animation-duration: 32s;
-  animation-delay: -8s;
-}
-
-@keyframes float {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  25% { transform: translate(100px, -50px) scale(1.1); }
-  50% { transform: translate(-50px, 100px) scale(0.9); }
-  75% { transform: translate(-100px, -30px) scale(1.05); }
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="10" fill="%237ed957" opacity="0.8"/></svg>') 16 16, auto;
 }
 
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   position: relative;
+}
+
+.color-block-yellow {
+  background: linear-gradient(135deg, #ffce00 0%, #ffe866 100%);
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+.color-block-green {
+  background: linear-gradient(135deg, #7ed957 0%, #a5e887 100%);
+  padding: 4rem 2rem;
+  position: relative;
+  margin: 0;
+}
+
+.color-block-pink {
+  background: linear-gradient(135deg, #ff66c4 0%, #ff99d9 100%);
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.color-block-white {
+  background: #ffffff;
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+.marquee-container {
+  background: #7ed957;
+  padding: 0.75rem 0;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  border-top: 2px solid #6bc847;
+  border-bottom: 2px solid #6bc847;
+}
+
+.marquee-content {
+  display: inline-flex;
+  animation: marquee 20s linear infinite;
+  align-items: center;
+  gap: 2rem;
+}
+
+.marquee-content img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes gradient-shift {
@@ -117,25 +90,4 @@ body {
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
-}
-
-.float-element {
-  position: fixed;
-  font-size: 2rem;
-  opacity: 0.1;
-  animation: float-around 30s infinite linear;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.float-element:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
-.float-element:nth-child(2) { top: 70%; right: 10%; animation-delay: -10s; }
-.float-element:nth-child(3) { top: 40%; left: 80%; animation-delay: -20s; }
-
-@keyframes float-around {
-  0% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(100px, -100px) rotate(90deg); }
-  50% { transform: translate(-100px, -200px) rotate(180deg); }
-  75% { transform: translate(-200px, 100px) rotate(270deg); }
-  100% { transform: translate(0, 0) rotate(360deg); }
 }
