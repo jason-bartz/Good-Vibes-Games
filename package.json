@@ -1,0 +1,27 @@
+{
+  "name": "good-vibes-games",
+  "version": "1.0.0",
+  "description": "Good Vibes Games - Solo game development studio",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jason-bartz/Good-Vibes-Games.git"
+  },
+  "keywords": ["games", "game development", "indie games", "solo dev"],
+  "author": "Jason Bartz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jason-bartz/Good-Vibes-Games/issues"
+  },
+  "homepage": "https://github.com/jason-bartz/Good-Vibes-Games#readme",
+  "dependencies": {
+    "next": "^15.5.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  }
+}
