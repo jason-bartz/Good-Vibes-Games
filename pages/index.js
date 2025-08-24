@@ -21,12 +21,7 @@ export default function Home() {
     }
     
     const handleScroll = () => {
-      const scrolled = window.pageYOffset
-      const cards = document.querySelectorAll(`.${styles.gameCard}`)
-      cards.forEach((card, index) => {
-        const speed = index === 0 ? 0.5 : -0.5
-        card.style.transform = `translateY(${scrolled * speed * 0.1}px) rotate(${index === 0 ? -1 : 1}deg)`
-      })
+      // Removed to let CSS animations handle the floating
     }
     
     const interval = setInterval(() => {
@@ -88,7 +83,7 @@ export default function Home() {
               priority
             />
             <div className={styles.logoContainer}>
-              <h1 className={styles.studioName}>GOOD VIBES<br/>GAME STUDIO</h1>
+              <h1 className={styles.studioName}>GOOD VIBES<br/>GAMES STUDIO</h1>
             </div>
           </div>
           <p className={styles.tagline}>THE SOLO DEVELOPMENT PROJECT OF JASON BARTZ</p>
@@ -158,6 +153,13 @@ export default function Home() {
             <span className={styles.separator}>•</span>
             <a href="https://www.jason-bartz.com/" target="_blank" rel="noopener noreferrer">Personal Site</a>
           </div>
+          <Image 
+            src="/logo.webp" 
+            alt="Good Vibes Games Logo" 
+            width={60} 
+            height={60}
+            className={styles.footerLogo}
+          />
           <p className={styles.copyright}>© 2025 Good Vibes Games</p>
         </footer>
       </div>

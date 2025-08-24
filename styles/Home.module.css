@@ -86,19 +86,16 @@
   border: 2px solid rgba(124, 252, 0, 0.3);
   border-radius: 30px;
   position: relative;
-  transform: rotate(-1deg);
+  animation: floatSection 8s ease-in-out infinite;
 }
 
-.philosophy::before {
-  content: "👾";
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2.5rem;
-  padding: 0 1rem;
-  background: #1a0033;
+@keyframes floatSection {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  25% { transform: translateY(-8px) rotate(-0.5deg); }
+  50% { transform: translateY(5px) rotate(-1.5deg); }
+  75% { transform: translateY(-5px) rotate(-0.8deg); }
 }
+
 
 .philosophy p {
   font-size: 1.3rem;
@@ -160,17 +157,33 @@
 }
 
 .gameCard:nth-child(1) {
-  transform: rotate(-1deg);
   border-color: rgba(124, 252, 0, 0.2);
+  animation: floatCard1 10s ease-in-out infinite;
+}
+
+@keyframes floatCard1 {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  25% { transform: translateY(-10px) rotate(-0.5deg); }
+  50% { transform: translateY(8px) rotate(-1.5deg); }
+  75% { transform: translateY(-6px) rotate(-0.8deg); }
 }
 
 .gameCard:nth-child(2) {
-  transform: rotate(1deg);
   border-color: rgba(255, 105, 180, 0.2);
+  animation: floatCard2 12s ease-in-out infinite;
+  animation-delay: -2s;
+}
+
+@keyframes floatCard2 {
+  0%, 100% { transform: translateY(0) rotate(1deg); }
+  25% { transform: translateY(-12px) rotate(0.5deg); }
+  50% { transform: translateY(10px) rotate(1.5deg); }
+  75% { transform: translateY(-8px) rotate(0.8deg); }
 }
 
 .gameCard:hover {
-  transform: rotate(0deg) translateY(-10px);
+  animation-play-state: paused;
+  transform: rotate(0deg) translateY(-10px) !important;
   border-color: rgba(255, 215, 0, 0.4);
   box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
 }
@@ -305,8 +318,24 @@
   margin: 0 0.5rem;
 }
 
+.footerLogo {
+  width: 60px;
+  height: 60px;
+  margin: 2rem auto 1rem;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3));
+  opacity: 0.8;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.footerLogo:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
 .copyright {
-  margin-top: 2rem;
+  margin-top: 1rem;
   color: rgba(255, 255, 255, 0.4);
   font-size: 0.9rem;
 }
@@ -318,10 +347,12 @@
   }
   
   .gameCard {
+    animation: none !important;
     transform: none !important;
   }
   
   .philosophy {
+    animation: none;
     transform: none;
     padding: 2rem;
   }
