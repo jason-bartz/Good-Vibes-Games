@@ -1,7 +1,7 @@
 {
-  "name": "Good Vibes Games",
+  "name": "Good Vibes Games Studio",
   "short_name": "GVGames",
-  "description": "Solo game development studio creating unique indie games",
+  "description": "Solo game development studio creating unique indie games with good vibes",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -14,8 +14,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#1a0033",
-  "background_color": "#1a0033",
+  "theme_color": "#ffce00",
+  "background_color": "#ffffff",
   "display": "standalone",
   "start_url": "/",
   "orientation": "portrait"

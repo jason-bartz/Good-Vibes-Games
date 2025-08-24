@@ -31,38 +31,45 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Good Vibes Games - Solo Game Development Studio</title>
-        <meta name="description" content="Good Vibes Games is the solo game development studio of Jason Bartz, creating unique indie games like Infinite Snake and Tandem Daily." />
-        <meta property="og:title" content="Good Vibes Games - Solo Game Development Studio" />
+        <title>Good Vibes Games Studio - Solo Game Development</title>
+        <meta name="description" content="Good Vibes Games Studio is the solo game development project of Jason Bartz, creating unique indie games like Infinite Snake and Tandem Daily with good vibes." />
+        <meta name="keywords" content="indie games, game development, Infinite Snake, Tandem Daily, Jason Bartz, Good Vibes Games" />
+        <meta name="author" content="Jason Bartz" />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Good Vibes Games Studio - Solo Game Development" />
         <meta property="og:description" content="Creating unique indie games with good vibes. Home of Infinite Snake and Tandem Daily." />
         <meta property="og:url" content="https://goodvibesgames.com" />
-        <meta name="twitter:title" content="Good Vibes Games" />
+        <meta property="og:image" content="https://goodvibesgames.com/open-graph-image.webp" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Good Vibes Games Studio - Creating indie games with good vibes" />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@Jsnbrtz" />
+        <meta name="twitter:title" content="Good Vibes Games Studio" />
         <meta name="twitter:description" content="Solo game dev studio creating Infinite Snake, Tandem Daily, and more indie games with good vibes." />
+        <meta name="twitter:image" content="https://goodvibesgames.com/open-graph-image.webp" />
+        <meta name="twitter:image:alt" content="Good Vibes Games Studio - Creating indie games with good vibes" />
       </Head>
       
       <div className="container">
         <header className={styles.header}>
-          <div className="color-block-yellow">
-            <div className={styles.headerContent}>
-              <div className={styles.logoWrapper}>
-                <Image 
-                  src="/logo.webp" 
-                  alt="Good Vibes Games Logo" 
-                  width={120} 
-                  height={120}
-                  className={styles.logoImage}
-                  priority
-                />
-                <div className={styles.logoContainer}>
-                  <h1 className={styles.studioName}>GOOD VIBES<br/>GAMES STUDIO</h1>
-                </div>
-              </div>
-              <p className={styles.tagline}>THE SOLO DEVELOPMENT PROJECT OF JASON BARTZ</p>
-            </div>
+          <div className={styles.logoWrapper}>
+            <Image 
+              src="/logo.webp" 
+              alt="Good Vibes Games Logo" 
+              width={200} 
+              height={200}
+              className={styles.logoImage}
+              priority
+            />
           </div>
+          <p className={styles.tagline}>THE SOLO DEVELOPMENT PROJECT OF JASON BARTZ</p>
         </header>
         
-        <section className="color-block-white">
+        <section className="color-block-yellow">
           <div className={styles.philosophy}>
             <p>
               Hi, I&apos;m Jason. I try to make games that start with a simple question: 
@@ -173,19 +180,22 @@ export default function Home() {
           <div className={styles.vibeMeter}>
             Current Vibe Level: <span ref={vibeMeterRef}>😊</span> 
           </div>
-          <div className={styles.footerLinks}>
-            <a href="https://x.com/Jsnbrtz" target="_blank" rel="noopener noreferrer">X</a>
-            <span className={styles.separator}>•</span>
-            <a href="https://www.jason-bartz.com/" target="_blank" rel="noopener noreferrer">Personal Site</a>
-          </div>
           <Image 
             src="/logo.webp" 
             alt="Good Vibes Games Logo" 
-            width={60} 
-            height={60}
+            width={50} 
+            height={50}
             className={styles.footerLogo}
           />
-          <p className={styles.copyright}>© 2025 Good Vibes Games</p>
+          <div className={styles.footerBottom}>
+            <span>© 2025 Good Vibes Games</span>
+            <span className={styles.separator}>•</span>
+            <div className={styles.footerLinks}>
+              <a href="https://x.com/Jsnbrtz" target="_blank" rel="noopener noreferrer">X</a>
+              <span className={styles.separator}>•</span>
+              <a href="https://www.jason-bartz.com/" target="_blank" rel="noopener noreferrer">Personal Site</a>
+            </div>
+          </div>
         </footer>
       </div>
     </>
