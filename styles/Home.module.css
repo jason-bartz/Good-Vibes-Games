@@ -44,9 +44,9 @@
 
 .lightningLeft,
 .lightningRight {
-  width: 48px;
-  height: 48px;
-  opacity: 0.8;
+  width: 96px;
+  height: 96px;
+  opacity: 0.85;
   animation: pulse 2s infinite;
 }
 

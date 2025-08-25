@@ -67,19 +67,20 @@ export default function Home() {
             />
           </div>
           <div className={styles.taglineWrapper}>
-            <Image src="/lightning.webp" alt="Lightning" width={48} height={48} className={styles.lightningLeft} />
+            <Image src="/lightning.webp" alt="Lightning" width={96} height={96} className={styles.lightningLeft} />
             <p className={styles.tagline}>THE SOLO DEVELOPMENT PROJECT OF JASON BARTZ</p>
-            <Image src="/lightning.webp" alt="Lightning" width={48} height={48} className={styles.lightningRight} />
+            <Image src="/lightning.webp" alt="Lightning" width={96} height={96} className={styles.lightningRight} />
           </div>
         </header>
         
         <section className="color-block-yellow">
           <div className={styles.philosophy}>
             <p>
-              Hi, I&apos;m Jason. I try to make games that start with a simple question: 
+              I try to make games that start with a simple question: 
               <span className={styles.highlight}> &quot;Would I actually want to play this?&quot;</span> 
               Whether that&apos;s taking inspiration from my son and combining snake mechanics with alchemy crafting, 
-              or making my version of a NYT puzzle game, I hope you enjoy my work.
+              or making my version of a NYT puzzle game, I&apos;m only vibing new games into existence that I think are fun. 
+              I hope you do too.
             </p>
           </div>
         </section>
