@@ -133,7 +133,16 @@ export default function Home() {
               
               <div className={styles.gamesGrid}>
                 <div className={styles.gameCard}>
-                  <div className={styles.gameEmoji} style={{'--delay': '0s'}}>🐍</div>
+                  <div className={styles.gameImageWrapper}>
+                    <Image 
+                      src="/infinite-snake-gameplay.gif" 
+                      alt="Infinite Snake Gameplay" 
+                      width={400} 
+                      height={225}
+                      className={styles.gameImage}
+                      unoptimized
+                    />
+                  </div>
                   <h3 className={styles.gameTitle}>Infinite Snake</h3>
                   <p className={styles.gameDescription}>
                     A mind-bending fusion of classic snake gameplay with deep crafting mechanics. 
@@ -153,7 +162,16 @@ export default function Home() {
                 </div>
                 
                 <div className={styles.gameCard}>
-                  <div className={styles.gameEmoji} style={{'--delay': '0.5s'}}>🚲</div>
+                  <div className={styles.gameImageWrapper}>
+                    <Image 
+                      src="/tandem-gameplay.gif" 
+                      alt="Tandem Gameplay" 
+                      width={400} 
+                      height={225}
+                      className={styles.gameImage}
+                      unoptimized
+                    />
+                  </div>
                   <h3 className={styles.gameTitle}>Tandem</h3>
                   <p className={styles.gameDescription}>
                     A daily brain teaser that pairs emojis with meaning. 
