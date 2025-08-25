@@ -134,7 +134,7 @@ export default function Home() {
           <div className="color-block-pink">
             <div className={styles.gamesSectionInner}>
               <div className={styles.sectionTitleWrapper}>
-                <Image src="/eye.webp" alt="Eye" width={50} height={50} className={styles.eyeIcon} />
+                <Image src="/eye.webp" alt="Eye" width={80} height={80} className={styles.eyeIcon} />
                 <h2 className={styles.sectionTitle}>CURRENT VIBES</h2>
               </div>
               
@@ -152,8 +152,8 @@ export default function Home() {
                   </div>
                   <h3 className={styles.gameTitle}>Infinite Snake</h3>
                   <p className={styles.gameDescription}>
-                    A mind-bending fusion of classic snake gameplay with deep crafting mechanics. 
-                    Consume and combine over 10,000 elements to literally rebuild reality, 
+                    A fusion of classic snake gameplay with deep crafting mechanics. 
+                    Combine over 10,000 elements to literally rebuild reality, 
                     from basic fire and water to entire civilizations and pop culture icons.
                   </p>
                   <ul className={styles.gameFeatures}>
@@ -161,7 +161,6 @@ export default function Home() {
                     <li>Multiple game modes & AI opponents</li>
                     <li>45+ unlockable skins</li>
                     <li>Epic boss encounters</li>
-                    <li>Built for my son who loves both genres</li>
                   </ul>
                   <a href="https://www.infinitesnake.io" target="_blank" rel="noopener noreferrer" className={styles.gameLink}>
                     PLAY INFINITE SNAKE
@@ -181,16 +180,15 @@ export default function Home() {
                   </div>
                   <h3 className={styles.gameTitle}>Tandem</h3>
                   <p className={styles.gameDescription}>
-                    A daily brain teaser that pairs emojis with meaning. 
-                    Match emoji duos to themed answers in this minimalist puzzle 
-                    that takes just minutes but stays with you all day.
+                    A daily, casual word puzzle. 
+                    Match emoji duos to themed answers in this minimal game 
+                    that takes just minutes but keeps you hooked day-after-day.
                   </p>
                   <ul className={styles.gameFeatures}>
                     <li>Fresh puzzle every 24 hours</li>
                     <li>4 answers, 2 emojis each</li>
                     <li>Track your daily streaks</li>
-                    <li>Share results with friends</li>
-                    <li>Clean, focused interface</li>
+                    <li>Play the complete archive of puzzles</li>
                   </ul>
                   <a href="https://www.tandemdaily.com" target="_blank" rel="noopener noreferrer" className={styles.gameLink}>
                     PLAY TANDEM
