@@ -67,9 +67,9 @@ export default function Home() {
             />
           </div>
           <div className={styles.taglineWrapper}>
-            <Image src="/lightning.webp" alt="Lightning" width={24} height={24} className={styles.lightningLeft} />
+            <Image src="/lightning.webp" alt="Lightning" width={48} height={48} className={styles.lightningLeft} />
             <p className={styles.tagline}>THE SOLO DEVELOPMENT PROJECT OF JASON BARTZ</p>
-            <Image src="/lightning.webp" alt="Lightning" width={24} height={24} className={styles.lightningRight} />
+            <Image src="/lightning.webp" alt="Lightning" width={48} height={48} className={styles.lightningRight} />
           </div>
         </header>
         
