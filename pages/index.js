@@ -66,7 +66,11 @@ export default function Home() {
               priority
             />
           </div>
-          <p className={styles.tagline}>THE SOLO DEVELOPMENT PROJECT OF JASON BARTZ</p>
+          <div className={styles.taglineWrapper}>
+            <Image src="/lightning.webp" alt="Lightning" width={24} height={24} className={styles.lightningLeft} />
+            <p className={styles.tagline}>THE SOLO DEVELOPMENT PROJECT OF JASON BARTZ</p>
+            <Image src="/lightning.webp" alt="Lightning" width={24} height={24} className={styles.lightningRight} />
+          </div>
         </header>
         
         <section className="color-block-yellow">
@@ -129,7 +133,10 @@ export default function Home() {
         <section className={styles.gamesSection}>
           <div className="color-block-pink">
             <div className={styles.gamesSectionInner}>
-              <h2 className={styles.sectionTitle}>CURRENT VIBES</h2>
+              <div className={styles.sectionTitleWrapper}>
+                <Image src="/eye.webp" alt="Eye" width={50} height={50} className={styles.eyeIcon} />
+                <h2 className={styles.sectionTitle}>CURRENT VIBES</h2>
+              </div>
               
               <div className={styles.gamesGrid}>
                 <div className={styles.gameCard}>
@@ -196,7 +203,7 @@ export default function Home() {
         
         <footer className={styles.footer}>
           <div className={styles.vibeMeter}>
-            Current Vibe Level: <span ref={vibeMeterRef}>😊</span> 
+            Current Vibe: <span ref={vibeMeterRef}>😊</span> 
           </div>
           <Image 
             src="/logo.webp" 
