@@ -218,6 +218,8 @@ export default function Home() {
               <a href="https://x.com/Jsnbrtz" target="_blank" rel="noopener noreferrer">X</a>
               <span className={styles.separator}>•</span>
               <a href="https://www.jason-bartz.com/" target="_blank" rel="noopener noreferrer">Personal Site</a>
+              <span className={styles.separator}>•</span>
+              <a href="mailto:jason@goodvibesgames.com">Email</a>
             </div>
           </div>
         </footer>

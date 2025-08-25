@@ -361,6 +361,7 @@
   .gamesGrid {
     grid-template-columns: 1fr;
     gap: 2rem;
+    padding: 0 0.5rem;
   }
   
   .gameCard {
@@ -371,7 +372,12 @@
   .philosophy {
     animation: none;
     transform: none;
-    padding: 2rem;
+    padding: 1.5rem;
+  }
+  
+  .philosophy p {
+    font-size: 1rem;
+    line-height: 1.6;
   }
   
   .logoWrapper {
@@ -382,6 +388,26 @@
   .logoImage {
     width: 120px;
     height: 120px;
+  }
+  
+  .gameTitle {
+    margin: 1rem 1rem 0.75rem 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .gameDescription {
+    margin: 0 1rem 1rem 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .gameFeatures {
+    margin: 1rem;
+  }
+  
+  .gameLink {
+    margin: 1rem 1rem 1.5rem 1rem;
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
   }
   
   .footerBottom {
